@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package grpc;
+
+message req {
+    double height=1;
+    double weight=2;
+}
+
+message res {
+    double bmc=1;
+}
+
+service bmc{
+    rpc bmcgrpc (req) returns (res){}
+}
